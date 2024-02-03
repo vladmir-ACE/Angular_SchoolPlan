@@ -3,14 +3,26 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RevendeurModule } from './modules/revendeur/revendeur.module';
+import { AdminModule } from './modules/admin/admin.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TableModule } from 'primeng/table';
+import { AuthModule } from './modules/auth/auth.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RevendeurModule,
+    AdminModule,
+    HttpClientModule,
+    TableModule,
+    AuthModule,
+  
   ],
   providers: [
     provideClientHydration()

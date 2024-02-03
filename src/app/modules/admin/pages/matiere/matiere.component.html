@@ -1,0 +1,38 @@
+
+
+<div class="row text-end">
+    <span><a routerLink="/admin/matiere/create" class="btn btn-primary" >Create</a></span>
+</div>
+<div class="card">
+  <p-table [value]="matieres" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Num</th>
+              <th>Intitule</th>
+              <th>code</th>
+              <th>Action</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-matiere let-index="rowIndex">
+          <tr>
+              <td>{{ index+1 }}</td>
+              <td>{{ matiere.intitule }}</td>
+              <td>{{ matiere.code }}</td>
+              <td>
+                  <a (click)="getSelectedMatiere(matiere)">
+                      <span>
+                          <i class="mdi mdi-grease-pencil"></i>
+                      </span>
+                  </a> 
+                  <a (click)="deleteMatiere(matiere.id)">
+                      <span>
+                          <i class="mdi mdi-delete-variant"></i>
+                      </span>
+                  </a>
+                  
+              </td>
+              
+          </tr>
+      </ng-template>
+  </p-table>
+</div>

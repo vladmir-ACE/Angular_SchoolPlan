@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Update Un Enseigant</h4>
+            
+            <form class="forms-sample" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="exampleInputUsername1">nom</label>
+                <input type="text" [(ngModel)]="enseignant.nom"  name="nom" class="form-control" id="exampleInputUsername1" placeholder="nom">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputUsername1">prenom</label>
+                <input type="text" [(ngModel)]="enseignant.prenom"  name="prenom" class="form-control" id="exampleInputUsername1" placeholder="prenom">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputUsername1">email</label>
+                <input type="text" [(ngModel)]="enseignant.email"  name="email" class="form-control" id="exampleInputUsername1" placeholder="email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputUsername1">Matricule</label>
+                <input type="text" [(ngModel)]="enseignant.matricule"  name="matricule" class="form-control" id="exampleInputUsername1" placeholder="matricule">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputUsername1">Tel</label>
+                <input type="text" [(ngModel)]="enseignant.tel"  name="tel" class="form-control" id="exampleInputUsername1" placeholder="Tel">
+              </div>
+              
+              <button type="submit" class="btn btn-primary me-2">Submit</button>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+</div>
