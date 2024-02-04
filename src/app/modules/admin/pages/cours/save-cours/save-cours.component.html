@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Ajouter Un Cours</h4>
+            
+            <form class="forms-sample" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="exampleInputUsername1">intitule</label>
+                <input type="text" [(ngModel)]="cours.intitule"  name="intitule" class="form-control" id="exampleInputUsername1" placeholder="intitule">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputUsername1">Matiere</label>
+                <select [(ngModel)]="cours.matiere" name="matiere" class="form-control">
+                    <option *ngFor="let mat of matieres" [ngValue]="mat">{{ mat.code }}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputUsername1">Enseignant</label>
+                <select [(ngModel)]="cours.enseignant"  name="enseignant"class="form-control" id="exampleInputUsername1">
+                    <option *ngFor="let en of enseignants" [ngValue]="en"> {{en.nom}}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputUsername1">Année Scolaire</label>
+                <select [(ngModel)]="cours.anne"  name="anne" class="form-control" id="exampleInputUsername1">
+                    <option *ngFor="let an of annes" [ngValue]="an"> {{an.code}}</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary me-2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+</div>

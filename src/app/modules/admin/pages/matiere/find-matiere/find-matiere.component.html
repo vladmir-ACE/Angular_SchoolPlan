@@ -1,0 +1,44 @@
+
+
+<div class="row">
+    <form  (ngSubmit)="onSubmit()">
+    <div class="form-group">              
+        <label for="exampleInputUsername1">Rechercher</label>
+        <input type="text" [(ngModel)]="find"  name="find" class="form-control" id="exampleInputUsername1" placeholder="Matiere/Code">        
+    </div>
+    <button type="submit" class="btn btn-primary me-2">Rechercher</button>
+    </form>
+    </div>
+<div class="card">
+  <p-table [value]="matieres" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Num</th>
+              <th>Intitule</th>
+              <th>code</th>
+              <th>Action</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-matiere let-index="rowIndex">
+          <tr>
+              <td>{{ index+1 }}</td>
+              <td>{{ matiere.intitule }}</td>
+              <td>{{ matiere.code }}</td>
+              <td>
+                  <a (click)="getSelectedMatiere(matiere)">
+                      <span>
+                          <i class="mdi mdi-grease-pencil"></i>
+                      </span>
+                  </a> 
+                  <a (click)="deleteMatiere(matiere.id)">
+                      <span>
+                          <i class="mdi mdi-delete-variant"></i>
+                      </span>
+                  </a>
+                  
+              </td>
+              
+          </tr>
+      </ng-template>
+  </p-table>
+</div>

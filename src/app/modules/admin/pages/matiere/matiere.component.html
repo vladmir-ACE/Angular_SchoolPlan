@@ -1,7 +1,10 @@
 
 
-<div class="row text-end">
-    <span><a routerLink="/admin/matiere/create" class="btn btn-primary" >Create</a></span>
+<div class="row ">
+    <div class="col-md-4">  <span><a routerLink="/admin/matiere/create" class="btn btn-primary" >Create</a></span></div>
+   
+     <div class="col-md-4"> <span><a routerLink="/admin/matiere/find" class="btn btn-success" >Rechercher</a></span></div>
+    
 </div>
 <div class="card">
   <p-table [value]="matieres" [tableStyle]="{ 'min-width': '50rem' }">

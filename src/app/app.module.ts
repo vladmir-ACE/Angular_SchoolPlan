@@ -8,6 +8,7 @@ import { AdminModule } from './modules/admin/admin.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TableModule } from 'primeng/table';
 import { AuthModule } from './modules/auth/auth.module';
+import { DatePipe } from '@angular/common';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AuthModule } from './modules/auth/auth.module';
   
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

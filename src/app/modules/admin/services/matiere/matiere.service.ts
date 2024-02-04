@@ -21,6 +21,9 @@ export class MatiereService {
   updateMatiere(data:Matiere,):Observable<Matiere>{
     return this.httpClient.put<Matiere>("http://localhost:8080/matiere/update",data);
   }
+  findtMatiere(info:String):Observable<Array<Matiere>>{
+    return this.httpClient.get<Array<Matiere>>("http://localhost:8080/matiere/find/"+info);
+  }
 
   deleteMatiere(id:number):Observable<Matiere>{
     return this.httpClient.delete<Matiere>("http://localhost:8080/matiere/delete/"+id);

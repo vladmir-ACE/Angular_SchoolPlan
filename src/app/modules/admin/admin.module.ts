@@ -15,6 +15,20 @@ import { TableModule } from 'primeng/table';
 import { FormsModule } from '@angular/forms';
 import { SaveMatiereComponent } from './pages/matiere/save-matiere/save-matiere.component';
 import { UpdateMatiereComponent } from './pages/matiere/update-matiere/update-matiere.component';
+import { AnneComponent } from './pages/anne/anne.component';
+import { ClasseComponent } from './pages/classe/classe.component';
+import { SaveClasseComponent } from './pages/classe/save-classe/save-classe.component';
+import { UpdateClasseComponent } from './pages/classe/update-classe/update-classe.component';
+import { UpdateAnneComponent } from './pages/anne/update-anne/update-anne.component';
+import { SaveAnneComponent } from './pages/anne/save-anne/save-anne.component';
+import { CoursComponent } from './pages/cours/cours.component';
+import { PlaningComponent } from './pages/planing/planing.component';
+import { SaveCoursComponent } from './pages/cours/save-cours/save-cours.component';
+import { UpdateCoursComponent } from './pages/cours/update-cours/update-cours.component';
+import { UpdatePlaningComponent } from './pages/planing/update-planing/update-planing.component';
+import { SavePlaningComponent } from './pages/planing/save-planing/save-planing.component';
+import { FindEnseigantComponent } from './pages/enseignant/find-enseigant/find-enseigant.component';
+import { FindMatiereComponent } from './pages/matiere/find-matiere/find-matiere.component';
 
 
 @NgModule({
@@ -28,7 +42,21 @@ import { UpdateMatiereComponent } from './pages/matiere/update-matiere/update-ma
     SaveComponent,
     UpdateComponent,
     SaveMatiereComponent,
-    UpdateMatiereComponent
+    UpdateMatiereComponent,
+    AnneComponent,
+    ClasseComponent,
+    SaveClasseComponent,
+    UpdateClasseComponent,
+    UpdateAnneComponent,
+    SaveAnneComponent,
+    CoursComponent,
+    PlaningComponent,
+    SaveCoursComponent,
+    UpdateCoursComponent,
+    UpdatePlaningComponent,
+    SavePlaningComponent,
+    FindEnseigantComponent,
+    FindMatiereComponent
   ],
   imports: [
     CommonModule,

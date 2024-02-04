@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Ajouter Un Planing</h4>
+            
+            <form class="forms-sample" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="exampleInputUsername1">Heure_debut(..H..M)</label>
+                <input type="text" [(ngModel)]="planing.heure_debut"  name="heure_debut" class="form-control" id="exampleInputUsername1" placeholder="Heure_debut">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputUsername1">Heure_fint(..H..M)</label>
+                <input type="text" [(ngModel)]="planing.heure_fin"  name="heure_fin" class="form-control" id="exampleInputUsername1" placeholder="Heure_fin">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputUsername1">Cours</label>
+                <select [(ngModel)]="planing.cours" name="cours" class="form-control">
+                    <option [ngValue]="planing.cours" selected>{{planing.cours.intitule}}</option>
+                    <option *ngFor="let cou of courss" [ngValue]="cou">{{ cou.intitule }}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputUsername1">Classe</label>
+                <select [(ngModel)]="planing.classe"  name="classe"class="form-control" id="exampleInputUsername1">
+                    <option [ngValue]="planing.classe" selected>{{planing.classe.intitule}}</option>
+                    <option *ngFor="let ca of classes" [ngValue]="ca"> {{ca.intitule}}</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary me-2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+</div>

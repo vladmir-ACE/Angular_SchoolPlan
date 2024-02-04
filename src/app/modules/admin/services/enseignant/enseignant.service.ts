@@ -18,6 +18,10 @@ export class EnseignantService {
   postEnseignant(data:Enseignant):Observable<Enseignant>{
     return this.httpClient.post<Enseignant>("http://localhost:8080/enseignant/save",data);
   }
+
+  findtEnseignant(info:String):Observable<Array<Enseignant>>{
+    return this.httpClient.get<Array<Enseignant>>("http://localhost:8080/enseignant/find/"+info);
+  }
   updateEnseignant(data:Enseignant,):Observable<Enseignant>{
     return this.httpClient.put<Enseignant>("http://localhost:8080/enseignant/update",data);
   }
