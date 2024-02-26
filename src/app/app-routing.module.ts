@@ -13,12 +13,12 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () => import('./modules/admin/admin.module').then((m) => m.AdminModule),
   },
-
   {
-    path: 'revendeur',
-    loadChildren: () => import('./modules/revendeur/revendeur.module').then((m) => m.RevendeurModule),
+    path: 'enseignant',
+    loadChildren: () => import('./modules/enseignant/enseignant.module').then((m) => m.EnseignantModule),
   },
 
+ 
 ];
 
 @NgModule({

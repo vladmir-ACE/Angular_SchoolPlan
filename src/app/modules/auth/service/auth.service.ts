@@ -17,7 +17,7 @@ export class AuthService {
   login(data:User):Observable<User>{
     return this.httpClient.post<User>("http://localhost:8080/login",data);
   }
-  register(data:User,id:number):Observable<User>{
+  register(data:User):Observable<User>{
     return this.httpClient.post<User>("http://localhost:8080/register",data);
   }
 
